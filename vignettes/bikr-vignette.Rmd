@@ -1,0 +1,61 @@
+---
+title: "bikr-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{bikr-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# The bikr bikeshare analysis package
+### (C) Daniel Van Veghel, _McMaster University, 2021_
+***
+
+The bikr package is a standalone R package used for the analysis and visualization of BikeShareData. 
+The first version of the package includes a sample bikeshare route dataset from Pittsburgh, Pennsylvania. 
+Several functions are included in the package; these will be shown in detail in the coming code chunks. 
+
+**The bikr package is available on the author's [Github Repository](http://www.github.com/vanveghd/bikr)**
+
+```{r setup}
+# After installing the bikr package from the Github Repository
+library(bikr)
+```
+
+### **The Data:**
+
+The data is available for download from the Google Datasets Search Engine, and was made publicly available by **Adam S. Carroll**. The data details individual trips for all bikeshare rides in Pittsburgh, for the first Quarter of 2021 (approximately 14,000 rides).
+
+While documentation about each variable in the dataset is available via:
+
+```{r}
+?bikr
+```
+
+Below are the variables and a brief outline of each of them:
+- **trip.id:** ID Number for the individual trip
+- **Starttime:** The date/time the bikeshare trip began
+- **Stoptime:** The date/time the bikeshare trip ended
+- **Bikeid:** The BikeShare bike's identifier number
+- **Tripduration:** The length of the trip in minutes
+- **From.station.id:** The origin hub ID number
+- **From.station.name:** The origin hub name/location
+- **To.station.id:** The destination hub ID number
+- **To.station.name:** The destination hub name/location
+- **Usertype:** Whether the rider is a customer or subscriber
+
+### **The functions:**
+
+- compare_means( _mean1, mean2, var1, var2, n1, n2_ ): a two-sample t-test for comparing the differences in means.  The function produces two values -- 1) the t-value from the t-distribution, of the difference in means and 2) the associated probability from the distribution for this specific t-value. 
+
+- visualize_trip_durations(): presents data visualizations of the Tripduration variable in the BikeShare dataset. There are no parameters. The function produces a histogram, boxplot and barplot to compare the means of different subgroups (based on the Usertype column in the dataset).
+
+#### **Example:**
+
+```{r}
+# For example:
+bikr::compare_means(25, 30, 28, 40, 33, 34)
+
+```
+
+Later versions of this package are likely to include more functions with better analytical capabilities for the bikeshare data. 
