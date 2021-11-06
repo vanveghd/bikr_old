@@ -45,7 +45,8 @@ bikr::visualize_route_durations()
 
 ## Functions available in first version of bikr
 
-compare\_means() visualize\_route\_durations()
+- compare\_means()
+- visualize\_route\_durations()
 
 ## References
 
