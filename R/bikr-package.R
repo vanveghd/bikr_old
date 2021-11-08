@@ -26,7 +26,8 @@ NULL
 #' A dataset containing records of all Pittsburgh Bike Share trips for Q1 of 2021
 #' including start/end times, durations, origins and destinations, and user types.
 #'
-#' @format A csv document with 14,619 cases of 10 variables:
+#' @usage data("bikesharedata")
+#' @format A data frame with 14,619 cases of 10 variables:
 #' \describe{
 #'   \item{trip.id}{ID Number for the individual trip}
 #'   \item{Starttime}{The date/time the bikeshare trip began}
@@ -43,5 +44,6 @@ NULL
 #' @docType data
 #' @keywords datasets, bike share
 #' @name bikesharedata
+#' @example summary(bikesharedata)
 #' @source Adam S Carroll & Pittsburgh Healthy Ride BikeShare, (https://www.kaggle.com/adamscarroll/pittsburgh-healthy-ride-bikeshare-rentals-2021-q1/metadata)
 NULL
