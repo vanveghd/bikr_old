@@ -4,7 +4,7 @@
 \name{bikr-package}
 \alias{bikr}
 \alias{bikr-package}
-\title{bikr: About the Package (One Line, Title Case)}
+\title{bikr: About the Package}
 \description{
 This package provides an example BikeShare trip dataset from Pittsburgh BikeShare (available for download at []()), as well as several scripts to analyze these trips. Package scripts can produce maps and statistical analysis (graphs, histograms) from trip data.
 }
@@ -16,7 +16,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Daniel Van Veghel \email{vanveghd@mcmaster.ca})
 
 }
 \keyword{internal}
